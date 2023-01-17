@@ -4,12 +4,14 @@ type ConnectAction = { type: "connect"; wallet: string };
 type DisconnectAction = { type: "disconnect" };
 type PageLoadedAction = { type: "pageLoaded"; isMetamaskInstalled: boolean };
 type LoadingAction = { type: "loading" };
+type IdleAction = { type: "idle" };
 
 type Action =
   | ConnectAction
   | DisconnectAction
   | PageLoadedAction
-  | LoadingAction;
+  | LoadingAction
+  | IdleAction;
 
 type Dispatch = (action: Action) => void;
 
@@ -48,6 +50,9 @@ function metamaskReducer(state: State, action: Action): State {
     }
     case "loading": {
       return { ...state, status: "loading" };
+    }
+    case "idle":{
+      return { ...state, status: "idle" };
     }
     default: {
       throw new Error("Unhandled action type");

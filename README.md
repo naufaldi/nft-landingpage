@@ -15,3 +15,4 @@ Build a dapp with Next.js and the MetaMask API
 - [MetaMask API](https://docs.metamask.io/guide/ethereum-provider.html#api)
 - [Framer Motion](https://www.framer.com/motion/)
 - [Design by Illyin Studio](https://www.figma.com/community/file/1182543443323256015)
+- [Tutorial Connect](https://trufflesuite.com/guides/metamask-api/)
